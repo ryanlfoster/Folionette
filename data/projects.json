@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Project 1",
+	"description": "Cool project",
+	"level": 9
+    },
+    {
+        "name": "Project 2",
+	"description": "Fun project",
+	"level": 8
+    }
+]

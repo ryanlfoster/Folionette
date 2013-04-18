@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Photoshop",
+	"description": "Ability to use Adove Creative Suite's Photoshop",
+	"level": 9
+    },
+    {
+        "name": "JavaScript",
+	"description": "JavaScript is a language",
+	"level": 8
+    },
+    {
+        "name": "CSS",
+	"description": "sdsd",
+	"level": 7
+    }
+]
