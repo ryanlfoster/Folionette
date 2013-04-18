@@ -1,11 +1,9 @@
 define([
 	//'jquery', 'underscore', 
 	'backbone', 
-
 	'js/modules/Skills',
 	'js/modules/Projects',
 	'js/modules/About',
-	
 	'marionette'
 ], function(Backbone, SkillList, ProjectList, About ){
 
