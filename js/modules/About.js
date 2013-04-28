@@ -33,17 +33,24 @@ define(['jquery','underscore','backbone',
 
 		initialize: function(options){
       		this.region = options.region;
+
     	},
     	
 		start: function(){
+
 			this.about = new AboutModel();
+//			this.show();
+
 			this.about.fetch();
+			//this.region.currentView.render();
+
 		},
 
-		show: function(content) {
-			this.region.show(new Views.ItemView({
+		show: function() {
+			this.view = new Views.ItemView({
 				model : this.about
-			}));
+			});
+			this.region.show(this.view);
 		}
 	});
 

@@ -8,10 +8,10 @@ function( $, _, Backbone, App){
 			content: ''
 		},
 		initialiaze: function(){
+
 		
 		},
 		url: 'data/about.json'
 	}); 
-	console.log(About);
 	return About;
 });
