@@ -1,0 +1,13 @@
+[
+    {
+        "name": "Twitter",
+	"description": "Stream of data",
+	"link": "http://twitter.com/name"
+    },
+    {
+        "name": "Dribble",
+	"description": "Stream of pixels",
+	"link": "http://dribble.com/name"
+    }
+]
+

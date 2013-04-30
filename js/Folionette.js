@@ -1,6 +1,6 @@
 define([
-'backbone', 'js/modules/Skills', 'js/modules/Projects', 'js/modules/About', 'marionette'],
- function(Backbone, SkillList, ProjectList, About) {
+'backbone', 'js/modules/Skills', 'js/modules/Projects', 'js/modules/About', 'js/modules/Social', 'marionette'],
+ function(Backbone, SkillList, ProjectList, About, SocialList) {
 
 	Folionette = new Backbone.Marionette.Application();
 
@@ -40,6 +40,16 @@ define([
 			controller : Folionette.projectsController
 		});
 
+
+		//add Social
+		Folionette.socialController = new SocialList.Controller({
+			region : Folionette.column3
+		});
+		Folionette.socialRouter = new SocialList.Router({
+			controller : Folionette.socialController
+		});
+		//console.log(Social);
+
 		//add About
 		Folionette.aboutController = new About.Controller({
 			region : Folionette.main
@@ -54,6 +64,8 @@ define([
 		Folionette.skillController.start();
 		//start Projects
 		Folionette.projectsController.start();
+		//start Social
+		Folionette.socialController.start();
 		//start About
 		Folionette.aboutController.start();
 		//bind model update to rendering
