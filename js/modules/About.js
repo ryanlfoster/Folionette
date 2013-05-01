@@ -17,11 +17,14 @@ define(['jquery','underscore','backbone',
       		this.controller = options.controller;
     	},
 		routes: {
-			'about': 'showAbout'
+			'about': 'highlight'
 		},
 
 		showAbout: function(){
 			this.controller.show();
+		},
+		highlight: function(){
+			this.controller.highlight();
 		}
 	
 			
@@ -51,7 +54,12 @@ define(['jquery','underscore','backbone',
 				model : this.about
 			});
 			this.region.show(this.view);
-		}
+		},
+		highlight: function (){
+			$('.active').removeClass('active');
+			$(this.region.el).addClass('active');
+
+		},
 	});
 
 	return About;

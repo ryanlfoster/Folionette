@@ -18,7 +18,7 @@ define(['jquery','underscore','backbone',
     	},
 		routes: {
 			'filter': 'filterStuff',
-			'skills': 'showSkills'
+			'skills': 'highlight'
 		},
 
 		filterStuff: function(){
@@ -27,6 +27,9 @@ define(['jquery','underscore','backbone',
 		},
 		showSkills: function(){
 			this.controller.start();
+		},
+		highlight: function(){
+			this.controller.highlight();
 		}
 		
 			
@@ -77,6 +80,14 @@ define(['jquery','underscore','backbone',
 			this.region.show(new Views.ListView({
 				collection : skillList
 			}));
+			
+			
+		},
+		highlight: function (){
+			console.log(this.region);
+			$('.active').removeClass('active');
+			$(this.region.el).addClass('active');
+
 		},
 
 

@@ -14,10 +14,13 @@ function( $, _, Backbone, App, Model, Views){
       		this.controller = options.controller;
     	},
 		routes: {
-			'social': 'showSocial'
+			'social': 'highlight'
 		},
 		showSocial: function(){
 			this.controller.showChannelList();
+		},
+		highlight: function(){
+			this.controller.highlight();
 		}
 	});
 
@@ -37,7 +40,12 @@ function( $, _, Backbone, App, Model, Views){
 			this.region.show(new Views.ListView({
 				collection : this.channelList
 			}));
-		}
+		},
+		highlight: function (){
+			$('.active').removeClass('active');
+			$(this.region.el).addClass('active');
+
+		},
 	});
 
 	return Social;

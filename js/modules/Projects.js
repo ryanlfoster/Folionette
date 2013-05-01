@@ -15,7 +15,7 @@ function( $, _, Backbone, App, Projects, Views){
     	},
 		routes: {
 			'filterprojects': 'filterStuff',
-			'projects': 'showProjects'
+			'projects': 'highlight'
 		},
 
 		filterStuff: function(){
@@ -24,6 +24,9 @@ function( $, _, Backbone, App, Projects, Views){
 		},
 		showProjects: function(){
 			this.controller.showProjectList();
+		},
+		highlight: function(){
+			this.controller.highlight();
 		}
 	});
 
@@ -45,6 +48,11 @@ function( $, _, Backbone, App, Projects, Views){
 			this.region.show(new Views.ListView({
 				collection : this.projectList
 			}));
+		},
+		highlight: function (){
+			$('.active').removeClass('active');
+			$(this.region.el).addClass('active');
+
 		},
 
 
