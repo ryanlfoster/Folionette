@@ -47,19 +47,33 @@ define(['jquery','underscore','backbone', 'js/Folionette',
 			itemViewContainer: '#skill-list',
 
 			ui: {
+				expand: '.expand'
 
 			},
 
 			events : {
+					'click .expand': 'expand'
 			
 			},
+
 			initialize: function() {
 
 			},
 
 			onRender: function() {
 
+			},
+
+			expand: function() {
+				if(this.ui.expand.html()!='Close') {
+					this.ui.expand.html('Close');
+				} else {
+					this.ui.expand.html('Expand');
+				}
+				
+				$('#column2').toggleClass('expanded');
 			}
+		
 
 	});
 	return Views;

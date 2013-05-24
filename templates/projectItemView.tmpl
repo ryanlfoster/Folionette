@@ -1,4 +1,8 @@
 <span><%= name %></span> <input type="button" value="View Project" class="show-details"/>
 <div class="details" style="display:none">
-	<%= description %>
+	<div><%= description %></div>
+	<h5>Skills</h5>
+	<ul>
+		<% _.each(skills, function(i) { %>  <li><a href="<%= i %>"><%= i %></a></li> <% }); %>
+	</ul>
 </div>

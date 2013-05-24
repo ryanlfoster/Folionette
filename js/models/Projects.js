@@ -10,7 +10,8 @@ define(['jquery','underscore','backbone', 'js/Folionette', 'marionette'],
 		defaults: {
 			name: '',
 			description: '',
-			level: 0
+			level: 0,
+			skills: []
 		},
 
 		initialize: function() {

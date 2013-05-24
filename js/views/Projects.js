@@ -17,7 +17,8 @@ define(['jquery','underscore','backbone', 'js/Folionette',
 		},
 
 		events : {
-				'click .show-details': 'showDetails',
+				'click .show-details': 'showDetails'
+
 		},
 
 		initialize: function() {
@@ -47,10 +48,12 @@ define(['jquery','underscore','backbone', 'js/Folionette',
 		itemViewContainer: '#project-list',
 
 		ui: {
+			expand: '.expand'
 
 		},
 
 		events : {
+				'click .expand': 'expand'
 		
 		},
 		initialize: function() {
@@ -60,6 +63,16 @@ define(['jquery','underscore','backbone', 'js/Folionette',
 		onRender: function() {
 
 
+		},
+
+		expand: function(){
+			if(this.ui.expand.html()!='Close') {
+				this.ui.expand.html('Close');
+			} else {
+				this.ui.expand.html('Expand');
+			}
+				
+			$('#column1').toggleClass('expanded');
 		}
 
 	});

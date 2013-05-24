@@ -13,3 +13,13 @@ body {
 	border: 1px solid #ee5;
 	background: #ffd;
 }
+.expanded {
+	height: 90%;
+	position: absolute;
+	top: 5%;
+	width: 90%;
+	margin: auto;
+	background: #fff;
+	z-index: 10;
+	left: 5%;
+}
