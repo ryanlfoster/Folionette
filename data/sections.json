@@ -1,6 +1,6 @@
 [
     {"name": "About",
-    "description" : "Some html here about me",
+    "description" : "Some <strong>html</strong> here about me",
     "module": "about"
     },
     {"name": "Skills",
