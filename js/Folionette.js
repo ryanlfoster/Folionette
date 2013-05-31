@@ -1,6 +1,6 @@
 define([
-'backbone', 'js/modules/Skills', 'js/modules/Projects', 'js/modules/About', 'js/modules/Social', 'marionette'],
- function(Backbone, SkillList, ProjectList, About, SocialList) {
+'backbone', 'js/modules/Skills', 'js/modules/Projects', 'js/modules/About', 'js/modules/Sections', 'js/modules/Social', 'marionette'],
+ function(Backbone, SkillList, ProjectList, About, Sections,  SocialList) {
 
 	Folionette = new Backbone.Marionette.Application();
 
@@ -25,7 +25,7 @@ define([
 		Backbone.history.start();
 		//add Skills Module
 		Folionette.skillController = new SkillList.Controller({
-			region : Folionette.column2,
+			region : Folionette.main,
 			app : Folionette
 		});
 		Folionette.skillRouter = new SkillList.Router({
@@ -34,7 +34,7 @@ define([
 
 		//add Projects
 		Folionette.projectsController = new ProjectList.Controller({
-			region : Folionette.column1
+			region : Folionette.main
 		});
 		Folionette.projectsRouter = new ProjectList.Router({
 			controller : Folionette.projectsController
@@ -43,12 +43,12 @@ define([
 
 		//add Social
 		Folionette.socialController = new SocialList.Controller({
-			region : Folionette.column3
+			region : Folionette.main
 		});
 		Folionette.socialRouter = new SocialList.Router({
 			controller : Folionette.socialController
 		});
-		//console.log(Social);
+
 
 		//add About
 		Folionette.aboutController = new About.Controller({
@@ -57,21 +57,27 @@ define([
 		Folionette.aboutRouter = new About.Router({
 			controller : Folionette.aboutController
 		});
+                //add Sections
+		Folionette.sectionController = new Sections.Controller({
+			region : Folionette.navigation
+		});
+		Folionette.sectionRouter = new Sections.Router({
+			controller : Folionette.sectionController
+		});
 
 
 
-		//start Skills
-		Folionette.skillController.start();
+//		//start Skills
+//		Folionette.skillController.start();
 		//start Projects
-		Folionette.projectsController.start();
-		//start Social
-		Folionette.socialController.start();
+//		Folionette.projectsController.start();
+//		//start Social
+//		Folionette.socialController.start();
 		//start About
 		Folionette.aboutController.start();
-		//bind model update to rendering
-		Folionette.aboutController.about.on('sync', function() {
-			  Folionette.aboutController.show();
-			});
+                
+                Folionette.sectionController.start();
+
 
 	});
 

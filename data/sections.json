@@ -1,0 +1,19 @@
+[
+    {"name": "About",
+    "description" : "Some html here about me",
+    "module": "about"
+    },
+    {"name": "Skills",
+    "description" : "Some html here about skills that I have",
+    "module": "skill"
+    },
+    {"name": "Project",
+    "description": "Some text about projects that I worked on",
+    "module": "projects"
+    },
+    {"name": "Social",
+    "description": "Some text about social networks and ways to connect", 
+    "module": "social"
+    }
+   
+]

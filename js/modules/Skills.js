@@ -52,7 +52,6 @@ define(['jquery','underscore','backbone',
 
 			this.skillList = new Skills.SkillList();
 
-			this.showHeader(this.skillList);
 
 			this.showFooter(this.skillList);
 
@@ -61,13 +60,6 @@ define(['jquery','underscore','backbone',
 			this.skillList.fetch();
 
 
-		},
-
-		showHeader: function(skillList) {
-			var header = new Layout.Header({
-				collection: skillList
-			});
-			this.app.header.show(header);
 		},
 
 		showFooter: function(skillList) {

@@ -1,10 +1,11 @@
 define(['jquery','underscore','backbone', 'js/Folionette', 'marionette'],
  function( $, _, Backbone, App){
   
-	var Projects = {};
-	// Todo Model
-	// ----------
-
+	var Projects = {
+            Project: {}, 
+            ProjectList: {}
+        };
+	// Project Model
 	Projects.Project = Backbone.Model.extend({
 		
 		defaults: {
@@ -20,8 +21,6 @@ define(['jquery','underscore','backbone', 'js/Folionette', 'marionette'],
 	});
 
 	// Project Collection
-	// ---------------
-
 	Projects.ProjectList = Backbone.Collection.extend({
 		model: Projects.Project,
 		
