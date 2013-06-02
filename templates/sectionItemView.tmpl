@@ -1,6 +1,9 @@
-<span><%= name %></span>
- 
-<div class="details" >
-	<div><%= description %></div>
+<div class="thumbnail" id="section-block-<%= module %>">
+    <div class="caption">
+        <h3><%= name %></h3>
+        <p class="details">
+        <%= description %>
+        </p>
+        <a class="btn show-details">Expand</a>
+    </div>
 </div>
-<input type="button" value="Expand" class="show-details"/>

@@ -9,6 +9,7 @@ define(['jquery','underscore','backbone',
 
 	Views.SectionView = Marionette.ItemView.extend({
 		tagName: 'li',
+                className: 'span3 section-block',
 		template: sectionItemView,
 
 		ui: {
@@ -32,7 +33,11 @@ define(['jquery','underscore','backbone',
 		},
 
 		showDetails: function(){
-                       console.log('expanding', this.model.attributes.module);
+                       //slide the section up
+                       $(this.el).slideUp();
+                       //slide the section that was main before down
+                       $('.section-block:hidden').slideDown();
+                       
                        //start the controller for the section
                        Folionette[this.model.attributes.module+'Controller'].start();
 			//this.ui.details.toggle();

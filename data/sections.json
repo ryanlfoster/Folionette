@@ -10,7 +10,7 @@
         "module": "skill"
     },
     {
-        "name": "Project",
+        "name": "Projects",
         "description": "Some text about projects that I worked on",
         "module": "projects"
     },
