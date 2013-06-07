@@ -43,6 +43,8 @@ define(['jquery','underscore','backbone', 'js/Folionette',
 	// filtering of activs vs completed items for display.
 
 	Views.ListView = Backbone.Marionette.CompositeView.extend({
+                tagName: 'div',
+                className: 'content',
 		template: projectListView,
 		itemView: Views.ItemView,
 		itemViewContainer: '#project-list',

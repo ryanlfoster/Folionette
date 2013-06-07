@@ -74,7 +74,7 @@ define([
 //		//start Social
 //		Folionette.socialController.start();
 		//start About
-		Folionette.aboutController.start();
+		//Folionette.aboutController.start();
                 
                 Folionette.sectionController.start();
 

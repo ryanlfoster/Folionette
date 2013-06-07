@@ -27,3 +27,9 @@ body {
     list-style: none;
 }
 
+#main .content {
+    opacity: 0.1;
+}
+.hero-unit { 
+    padding: 30px;
+}

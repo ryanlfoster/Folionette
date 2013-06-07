@@ -14,7 +14,7 @@ define(['jquery','underscore','backbone', 'js/Folionette',
 		},
 
 		events : {
-			'click .show-details': 'showDetails',
+			'click .show-details': 'showDetails'
 		},
 
 		showDetails: function(){
@@ -25,6 +25,8 @@ define(['jquery','underscore','backbone', 'js/Folionette',
 	// Item List View
 
 	Views.ListView = Backbone.Marionette.CompositeView.extend({
+                tagName: 'div',
+                className: 'content',
 		template: socialListView,
 		itemView: Views.ItemView,
 		itemViewContainer: '#social-list',

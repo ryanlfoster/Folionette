@@ -9,7 +9,8 @@ define(['jquery','underscore','backbone', 'js/Folionette', 'marionette'],
 	Sections.Section = Backbone.Model.extend({
 		defaults: {
 			name: '',
-			description: ''
+			description: '',
+                        active: false
 
 		},
 		initialize: function() {

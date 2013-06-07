@@ -2,7 +2,8 @@
     {
         "name": "About",
         "description": "Some <strong>html</strong> here about me",
-        "module": "about"
+        "module": "about",
+        "active": true
     },
     {
         "name": "Skills",

@@ -43,6 +43,8 @@ define(['jquery','underscore','backbone', 'js/Folionette',
 
 	Views.ListView = Backbone.Marionette.CompositeView.extend({
 		template: skillListView,
+                        tagName: 'div',
+                        className: 'content',
 			itemView: Views.ItemView,
 			itemViewContainer: '#skill-list',
 
