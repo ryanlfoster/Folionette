@@ -8,6 +8,7 @@ require.config({
         "underscore":"js/lib/underscore",
         "backbone":"js/lib/backbone",
         "marionette":"js/lib/backbone.marionette",
+        "isotope":"js/lib/isotope",
 
 
         // Plugins
@@ -27,13 +28,18 @@ require.config({
         "marionette":{
             "deps":["underscore", "backbone", "jquery"],
             "exports":"Marionette"
+        },
+        //Isotope
+        "isotope":{
+            "deps":["jquery"],
+            "exports":"Isotope"
         }
 
     }
 });
 
 // Start Application
-require(["js/Folionette", "jquery", "backbone", "marionette"],
+require(["js/Folionette", "jquery", "backbone", "marionette", "isotope"],
     function (Folionette, $) {
         window.Folionette = Folionette;
     });
