@@ -110,7 +110,7 @@ define(['jquery', 'underscore', 'backbone',
                 } else {
                     $('#main').animate({
                         height: 10
-                    }, 1000, function () {
+                    }, 200, function () {
                         //animate with isotope
                         $('#section-list').isotope({
                             filter: '.inactive',
