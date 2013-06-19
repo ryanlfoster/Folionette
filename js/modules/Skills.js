@@ -53,7 +53,6 @@ define(['jquery','underscore','backbone',
 			this.skillList = new Skills.SkillList();
 
 
-			this.showFooter(this.skillList);
 
 			this.showSkillList(this.skillList);
 			
@@ -62,12 +61,6 @@ define(['jquery','underscore','backbone',
 
 		},
 
-		showFooter: function(skillList) {
-			var footer = new Layout.Footer({
-				collection: skillList
-			});
-			this.app.footer.show(footer);
-		},
 		showSkillList: function(skillList) {
 			this.region.show(new Views.ListView({
 				collection : skillList

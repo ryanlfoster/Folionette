@@ -71,33 +71,35 @@ define(['jquery', 'underscore', 'backbone',
 
                 //animate the main block
                 var self = this;
+                var easing = 'easeOutExpo';
                 if ($('#main .content').length) {
 
                     $('#main .content').animate({
                         opacity: 0
-                    }, 500, function () {
+                    }, 500, easing, function () {
                         //animate with isotope
                         $('#section-list').isotope({
                             filter: '.inactive',
                             animationOptions: {
                                 duration: 750,
-                                easing: 'linear',
+                                easing: easing,
                                 queue: false
                             }
                         });
 
                         $('#main').animate({
                             height: 10
-                        }, 1000, function () {
+                        }, 1000, easing, function () {
                             //start the controller for the section
 
                             Folionette[self.model.get('module') + 'Controller'].start();
+                           // Folionette[self.model.get('module') + 'Router'].navigate("/projects/");
                             $('#main .content').animate({
                                 opacity: 1
                             }, 500);
                         }).animate({
-                            height: 200
-                        }, 500, function () {
+                            height: 445
+                        }, 500, easing, function () {
                             //use isotope to animate sections
                             //$('#section-list').isotope({});
 
@@ -110,13 +112,13 @@ define(['jquery', 'underscore', 'backbone',
                 } else {
                     $('#main').animate({
                         height: 10
-                    }, 200, function () {
+                    }, 200, easing, function () {
                         //animate with isotope
                         $('#section-list').isotope({
                             filter: '.inactive',
                             animationOptions: {
                                 duration: 750,
-                                easing: 'linear',
+                                easing: easing,
                                 queue: false
                             }
                         });
@@ -136,8 +138,8 @@ define(['jquery', 'underscore', 'backbone',
                         });
 
                     }).animate({
-                        height: 200
-                    }, 1000, function () {
+                        height: 450
+                    }, 1000, easing, function () {
 
                     });
                 }

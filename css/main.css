@@ -1,6 +1,7 @@
 body {
 	color: #333;
         font-family: 'Lato', sans-serif;
+        background: url('../img/blurbg.jpg');
 }
 
 .column {
@@ -11,8 +12,7 @@ body {
 	padding:10px;
 }
 .active {
-	border: 1px solid #ee5;
-	background: #ffd;
+
 }
 .expanded {
 	height: 90%;
@@ -38,4 +38,16 @@ body {
 }
 .section-block {
     margin-bottom: 10px;
+}
+.content {
+    height: 550px;
+}
+.thumbnail {
+    background: #fff;
+    -webkit-box-shadow:  1px 1px 2px 1px rgba(0, 0, 0, 0.08);
+    box-shadow:  1px 1px 2px 1px rgba(0, 0, 0, 0.08);
+    border: 0;
+}
+#header {
+    margin: 45px 30px;
 }

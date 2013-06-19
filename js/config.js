@@ -5,6 +5,7 @@ require.config({
     paths:{
         // Core Libraries
         "jquery":"js/lib/jquery",
+        "jqueryEasing":"js/lib/jquery.easing.min",
         "underscore":"js/lib/underscore",
         "backbone":"js/lib/backbone",
         "marionette":"js/lib/backbone.marionette",
@@ -33,13 +34,17 @@ require.config({
         "isotope":{
             "deps":["jquery"],
             "exports":"Isotope"
+        },
+        //jqueryEasing
+        "jqueryEasing": {
+            "deps":["jquery"]
         }
 
     }
 });
 
 // Start Application
-require(["js/Folionette", "jquery", "backbone", "marionette", "isotope"],
+require(["js/Folionette", "jquery", "backbone", "marionette", "isotope", "jqueryEasing"],
     function (Folionette, $) {
         window.Folionette = Folionette;
     });
